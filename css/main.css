@@ -22,22 +22,78 @@ html {
   box-sizing: inherit;
 }
 
+body{
+    text-align:center;
+}
+
+a{
+    text-decoration:none;
+    color:#fff;   
+}
+
+.forward{
+    background-color: green;
+    border-radius: 50%;
+    text-align:center;
+    display:inline-block;
+    width:6em;
+    line-height: 6em;
+    transition: all .4s linear;
+    margin:0 1em;
+}
+
+.forward:hover{
+    background-color:#fff;
+    color:#000;
+}
+
+.backward{
+    background-color:red;
+    border-radius: 50%;
+    text-align:center;
+    display: inline-block;
+    width: 6em;
+    line-height: 6em;
+    transition: all .4s linear;
+    margin: 0 1em;
+}
+
+.backward:hover{
+    background-color:#fff;
+    color: #000;
+}
+
 .clock-face {
-  height: 300px;
-  width: 300px;
-    background-color; 
-    background-repeat;
+    height: 300px;
+    width: 300px;
+    background: url("../images/clock-face.svg") repeat left center;
+    background-repeat: no-repeat;
     position:relative;
+    margin: 0 auto;
 }
 
 .hand {
     position:absolute;
     width: 14px;
     left: calc(50% - 7px);
+    bottom: 50%;
     transition: all 5s linear;
+    transform-origin:bottom center;
 
 }
 
+.clock-face:target .hand-hour {
+    transform: rotate(4320deg);
+}
+
+.clock-face:target .hand-hour {
+    transform: rotate(360deg);
+}
+
 .center {
-  width: 28px;
+    position:absolute;
+    width: 28px;
+    top: calc(50% - 14px);
+    left: calc(50% - 14px);
+}
 }
